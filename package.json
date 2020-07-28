@@ -1,0 +1,23 @@
+{
+  "name": "sit725-prac2b",
+  "version": "1.0.0",
+  "description": "linklist task",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leelaka/sit725-prac2b.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leelaka/sit725-prac2b/issues"
+  },
+  "homepage": "https://github.com/Leelaka/sit725-prac2b#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
