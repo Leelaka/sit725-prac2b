@@ -8,11 +8,39 @@ var adder = function(num1, num2){
     return result;
 };
 
-let accounts = [
-        {id: 1, name: 'alex', deposit: 5},
-        {id: 2, name: 'sarah', deposit: 5},
-        {id: 3, name: 'jim', deposit: 15}
-    ];
+//node linked list class 
+class ListNode{
+    constructor(id, name, deposit){
+        this.id = id;
+        this.name = name;
+        this.deposit = deposit;
+        this.next = null;
+       
+    }
+    
+}
+
+class LinkedList {
+    constructor(head = null) {
+        this.head = head;
+    }
+}
+
+let node1 = new ListNode(1, 'alex', 5);
+let node2 = new ListNode(2, 'sarah', 5);
+node1.next = node2;
+let node3 = new ListNode(3, 'jim', 15);
+node2.next = node3;
+//node3.next = null;
+
+let list = new LinkedList(node1);
+
+
+//linked list is more efficient, because
+//of the dynamic size there is no waste of memory compared to arrays.
+//The insertion of linkedlist is easy compared to an array, you can insert an element by
+//just changing the pointer and placing the value.
+
 
 app.get('/test', function(req,res){
     var username = req.query.username;
@@ -28,11 +56,12 @@ app.get('/adder', function(req,res){
 });
 
 app.get('/acc', function(req,res){
-    console.log(accounts);
-    res.send("Verify the result of the array "+accounts);
+    console.log(list.head);
+    res.send("Verify the result of the link list " +list.head);
 });
 
 var port = 3000;
 app.listen(port);
-console.log('Server listening on: '+port);
+console.log('Server listening on: ' +port);
+
 
